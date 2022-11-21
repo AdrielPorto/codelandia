@@ -40,7 +40,7 @@ jobs:
       - name: Deploy
         uses: appleboy/ssh-action@master
         with:
-          host: "ec2-54-152-95-27.compute-1.amazonaws.com"
+          host: "ec2-44-202-38-56.compute-1.amazonaws.com"
           username: "ubuntu"
           key: ${{ secrets.SSH_KEY_RSA }}
           port: ${{ secrets.PORT }}
