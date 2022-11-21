@@ -1,15 +1,15 @@
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS "uuid_ossp";
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
-
 CREATE TABLE IF NOT EXISTS application_user(
-  uuid uuid DEFAULT uuid_generate_v4(),
-  nome VARCHAR NOT NULL,
-  sobrenome VARCHAR NOT NULL,
-  email VARCHAR NOT NULL,
-  data_nascimento date NOT NULL,
-  genero VARCHAR NOT NULL,
-  password VARCHAR NOT NULL,
-  PRIMARY KEY (uuid)
-)
-
-INSERT INTO application_user (username, password) VALUES ('fabricio', crypt( 'admin', 'my_salt'));
+    uuid uuid DEFAULT uuid_generate_v4(),
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    PRIMARY KEY (uuid)
+);
+INSERT INTO application_user (username, email, password)
+VALUES (
+        'Vinicius',
+        'punhocage@gmail.com',
+        crypt('admin', 'my_salt')
+    );

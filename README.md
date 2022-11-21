@@ -1,1 +1,3 @@
-//Application develop in university to teach students about node js and microsservices with express//
+# node-segunda
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/node-eayp1x)
