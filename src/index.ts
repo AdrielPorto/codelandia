@@ -8,7 +8,7 @@ const app = express();
 const cors = require('cors');
 
 app.use(express.json());
-// app.use(cors({ credentials: true, origin: `http://127.0.0.1:3000`, optionsSuccessStatus: 200 }))
+app.use(cors({ credentials: true, origin: `http://44.202.38.5:3000`, optionsSuccessStatus: 200 }))
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
