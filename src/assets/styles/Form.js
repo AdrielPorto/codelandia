@@ -17,16 +17,25 @@ export const FormGroup = styled.div`
     &.formCheck{
         display: flex;
         align-items: center;
-        gap: 20px;
         flex-wrap: wrap;
+        width: 300px;
+        @media screen and (max-width: 320px) {
+           
+            width: 100%;
+        }
+        label{
+                margin-left: 20px;
+                @media screen and (max-width: 320px) {
+                margin-left: 0;
+            }
+        }
         .error-text{
-            margin-top: -20px;
+          
+          flex: 1;
             ${breakAt(BreakpointSize.md)} {
                 margin-top: 0;
             }
-            ${breakAt(BreakpointSize.sm)} {
-                margin-top: -10px;
-            }
+            
         }
         
     }
