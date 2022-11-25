@@ -40,11 +40,11 @@ jobs:
       - name: Deploy
         uses: appleboy/ssh-action@master
         with:
-          host: "ec2-44-202-38-56.compute-1.amazonaws.com"
+          host: "ec2-44-204-233-174.compute-1.amazonaws.com"
           username: "ubuntu"
           key: ${{ secrets.SSH_KEY_RSA }}
           port: ${{ secrets.PORT }}
           script: |
             sudo docker rm -f ezops-chat-app
             sudo docker pull adrielporto/ezops-chat-app:latest
-            sudo docker run -d --name=ezops-chat-app -p 3000:3000 --network=host --restart=always adrielporto/ezops-chat-app:latest
+            sudo docker run -d --name=ezops-chat-app -p 3000:3000 --network=host --restart=always adrielporto/ezops-chat-app npm run dev
